@@ -1,0 +1,1589 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cream: #FAF6EF;
+    --ivory: #FFFCF7;
+    --beige: #EDE1D2;
+    --brown: #695344;
+    --dark-brown: #3F3028;
+    --pink: #E8BFC0;
+    --muted: #9B8878;
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--dark-brown);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+}
+
+
+
+.navbar {
+    height: 90px;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #EDE5DB;
+}
+
+.logo {
+    text-decoration: none;
+    color: var(--dark-brown);
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.logo-icon {
+    color: #C58F91;
+    margin-right: 6px;
+}
+
+.nav-tagline {
+    color: var(--muted);
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+
+.welcome-section {
+    max-width: 1250px;
+    min-height: calc(100vh - 150px);
+    margin: auto;
+    padding: 65px 8% 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+}
+
+
+
+.welcome-content {
+    flex: 1;
+    max-width: 560px;
+}
+
+.welcome-label {
+    display: inline-block;
+    color: #A77A68;
+    background-color: #F1E5D8;
+    padding: 11px 16px;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 28px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 5vw, 66px);
+    line-height: 1.15;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+}
+
+h1 span {
+    color: #B98282;
+    font-style: italic;
+}
+
+.welcome-description {
+    max-width: 440px;
+    margin-top: 24px;
+    margin-bottom: 30px;
+    color: #857568;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+.start-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 28px;
+    padding: 17px 27px;
+    background-color: var(--brown);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: var(--dark-brown);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px #69534425;
+}
+
+.start-button span {
+    font-size: 20px;
+}
+
+.welcome-note {
+    margin-top: 27px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.welcome-note span {
+    color: #C58F91;
+    font-size: 18px;
+    margin-right: 6px;
+}
+
+
+.welcome-art {
+    flex: 1;
+    min-height: 410px;
+    max-width: 450px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.art-circle {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    background-color: #F0E1D2;
+    border-radius: 50%;
+}
+
+.wellness-illustration {
+    width: 260px;
+    height: 300px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8EDE3;
+    border-radius: 48% 48% 42% 42%;
+}
+
+.main-illustration {
+    width: 180px;
+    height: 210px;
+    object-fit: contain;
+}
+
+
+
+.floating-card {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 17px;
+    background-color: var(--ivory);
+    border: 1px solid #F0E6DB;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px #69534412;
+    color: var(--brown);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.card-top {
+    top: 45px;
+    right: 0;
+}
+
+.card-bottom {
+    bottom: 45px;
+    left: 0;
+}
+
+.decor {
+    position: absolute;
+    color: #C58F91;
+    font-size: 32px;
+}
+
+.decor-one {
+    top: 50px;
+    left: 45px;
+}
+
+.decor-two {
+    top: 110px;
+    right: 5px;
+    font-size: 28px;
+}
+
+.decor-three {
+    bottom: 60px;
+    right: 30px;
+    font-size: 35px;
+}
+
+
+
+.welcome-footer {
+    min-height: 60px;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border-top: 1px solid #EDE5DB;
+    color: #9B8878;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .navbar {
+        height: 75px;
+        padding: 0 6%;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .nav-tagline {
+        font-size: 10px;
+        text-align: right;
+    }
+
+    .welcome-section {
+        padding: 45px 7%;
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .welcome-content {
+        width: 100%;
+    }
+
+    .welcome-label {
+        font-size: 9px;
+        margin-bottom: 22px;
+    }
+
+    h1 {
+        font-size: 43px;
+    }
+
+    .welcome-description {
+        font-size: 14px;
+        margin: 22px auto 27px;
+    }
+
+    .welcome-art {
+        width: 100%;
+        min-height: 350px;
+    }
+
+    .art-circle {
+        width: 270px;
+        height: 270px;
+    }
+
+    .wellness-illustration {
+        width: 210px;
+        height: 240px;
+    }
+
+    .main-illustration {
+        width: 145px;
+        height: 180px;
+    }
+
+    .card-top {
+        top: 15px;
+        right: -5px;
+    }
+
+    .card-bottom {
+        bottom: 15px;
+        left: -5px;
+    }
+
+    .welcome-footer {
+        flex-wrap: wrap;
+        font-size: 8px;
+        gap: 9px;
+        text-align: center;
+    }
+}
+
+
+
+.back-link {
+    color: var(--brown);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    color: #B98282;
+}
+
+.dashboard {
+    max-width: 1150px;
+    margin: auto;
+    padding: 65px 7%;
+}
+
+.dashboard-heading {
+    margin-bottom: 45px;
+}
+
+.dashboard-heading h1 {
+    font-size: clamp(42px, 5vw, 58px);
+    margin-top: 8px;
+}
+
+.dashboard-heading > p {
+    color: #857568;
+    line-height: 1.8;
+    margin-top: 18px;
+    max-width: 520px;
+    font-size: 14px;
+}
+
+
+
+.wellness-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.wellness-card {
+    min-height: 265px;
+    padding: 28px;
+    border-radius: 18px;
+    text-decoration: none;
+    color: var(--dark-brown);
+    border: 1px solid #EDE3D8;
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.wellness-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px #69534412;
+}
+
+.recipe-card {
+    background-color: #F3E8D9;
+}
+
+.yoga-card {
+    background-color: #F3E4E2;
+}
+
+.selfcare-card {
+    background-color: #F0E9E0;
+}
+
+.habits-card {
+    background-color: #F5E9E8;
+}
+
+.tips-card {
+    background-color: #ECE8E0;
+}
+
+.card-icon {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.card-number {
+    font-size: 9px;
+    letter-spacing: 1.8px;
+    color: #9B8170;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.wellness-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.wellness-card p {
+    font-size: 13px;
+    color: #857568;
+    line-height: 1.8;
+    max-width: 330px;
+    margin-bottom: 22px;
+}
+
+.card-link {
+    color: #946D64;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: auto;
+}
+
+
+.daily-reminder {
+    margin-top: 35px;
+    padding: 25px 30px;
+    background-color: #FFFCF7;
+    border: 1px solid #EDE5DB;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.reminder-icon {
+    font-size: 38px;
+    color: #C58F91;
+}
+
+.daily-reminder h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+
+.daily-reminder p {
+    color: #857568;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .dashboard {
+        padding: 45px 6%;
+    }
+
+    .dashboard-heading {
+        margin-bottom: 30px;
+    }
+
+    .dashboard-heading h1 {
+        font-size: 42px;
+    }
+
+    .wellness-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .wellness-card {
+        min-height: 240px;
+        padding: 24px;
+    }
+
+    .daily-reminder {
+        padding: 22px;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
+
+.recipes-page {
+    max-width: 1150px;
+    margin: auto;
+    padding: 60px 7%;
+}
+
+.recipes-heading {
+    padding: 10px 0 35px;
+}
+
+.recipes-heading h1 {
+    font-size: clamp(45px, 5vw, 62px);
+    margin-top: 8px;
+}
+
+.recipes-heading > p {
+    max-width: 500px;
+    margin-top: 18px;
+    color: #857568;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+.recipe-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 10px 0 55px;
+}
+
+.recipe-categories a {
+    text-decoration: none;
+    padding: 12px 21px;
+    border: 1px solid #E7D8C8;
+    border-radius: 30px;
+    color: #695344;
+    background: #FFFCF7;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.recipe-categories a:hover {
+    background: #695344;
+    color: white;
+}
+
+
+.recipe-section {
+    margin-bottom: 55px;
+    scroll-margin-top: 25px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.section-flower {
+    color: #C58F91;
+    font-size: 32px;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+
+
+.recipe-card-item {
+    overflow: hidden;
+    background: #FFFCF7;
+    border: 1px solid #EDE3D8;
+    border-radius: 17px;
+    transition: 0.3s ease;
+}
+
+.recipe-card-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px #69534412;
+}
+
+.recipe-image {
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 72px;
+}
+
+.image-oats {
+    background: #F0E3D2;
+}
+
+.image-poha {
+    background: #F4E7D5;
+}
+
+.image-chilla {
+    background-color: #F1E2CC;
+}
+
+.image-moong-chilla {
+    background-color: #E8EBD9;
+}
+
+.image-oats-chilla {
+    background-color: #EFE5D7;
+}
+
+.image-paneer-chilla {
+    background-color: #F2E0DF;
+}
+.image-bowl {
+    background: #E8E8D9;
+}
+
+.image-khichdi {
+    background: #F0E1CF;
+}
+
+.image-sandwich {
+    background: #F2E4D8;
+}
+
+.image-fruit {
+    background: #F2DFE0;
+}
+
+.image-smoothie {
+    background: #EFE5D2;
+}
+
+.image-lemon {
+    background: #F2EDCF;
+}
+
+.recipe-info {
+    padding: 24px;
+}
+
+.recipe-tag {
+    display: inline-block;
+    color: #A77A68;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.recipe-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.recipe-info > p {
+    color: #857568;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* RECIPE DETAILS */
+
+.recipe-info details {
+    border-top: 1px solid #EDE3D8;
+    padding-top: 15px;
+}
+
+.recipe-info summary {
+    color: #946D64;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.recipe-info details h4 {
+    font-size: 13px;
+    margin: 18px 0 8px;
+}
+
+.recipe-info details ul {
+    padding-left: 20px;
+    color: #857568;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.recipe-info details p {
+    color: #857568;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* FOOTNOTE */
+
+.recipe-note {
+    padding: 24px;
+    background: #F3E8E5;
+    color: #876D66;
+    border-radius: 13px;
+    font-size: 13px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .recipes-page {
+        padding: 40px 6%;
+    }
+
+    .recipes-heading h1 {
+        font-size: 44px;
+    }
+
+    .recipe-categories {
+        gap: 8px;
+        margin-bottom: 40px;
+    }
+
+    .recipe-categories a {
+        padding: 10px 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .recipe-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .recipe-image {
+        height: 170px;
+    }
+
+    .recipe-info {
+        padding: 20px;
+    }
+}
+
+.yoga-page {
+    max-width: 1150px;
+    margin: auto;
+    padding: 45px 7% 65px;
+}
+
+.yoga-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    padding: 25px 0 55px;
+}
+
+.yoga-hero-text {
+    flex: 1;
+}
+
+.yoga-hero-text h1 {
+    font-size: clamp(40px, 5vw, 58px);
+    margin-top: 10px;
+}
+
+.yoga-hero-text h1 span {
+    color: #B98282;
+    font-style: italic;
+}
+
+.yoga-hero-text > p {
+    max-width: 440px;
+    margin: 22px 0 28px;
+    color: #857568;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.yoga-hero-art {
+    flex: 1;
+    min-height: 340px;
+    max-width: 390px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.yoga-art-circle {
+    position: absolute;
+    width: 290px;
+    height: 290px;
+    background: #F0E1D2;
+    border-radius: 50%;
+}
+
+.yoga-hero-emoji {
+    position: relative;
+    z-index: 1;
+    width: 230px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F8EDE3;
+    border-radius: 48% 48% 42% 42%;
+    font-size: 115px;
+}
+
+.yoga-flower {
+    position: absolute;
+    z-index: 2;
+    color: #C58F91;
+    font-size: 35px;
+}
+
+.flower-one {
+    top: 25px;
+    left: 25px;
+}
+
+.flower-two {
+    top: 65px;
+    right: 10px;
+}
+
+.yoga-art-note {
+    position: absolute;
+    z-index: 3;
+    bottom: 15px;
+    right: 0;
+    padding: 14px 18px;
+    background: #FFFCF7;
+    color: #695344;
+    border: 1px solid #EDE3D8;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+/* YOGA INTRO */
+
+.yoga-intro {
+    text-align: center;
+    padding: 40px 20px 55px;
+    border-top: 1px solid #EDE5DB;
+}
+
+.yoga-intro h2 {
+    margin-top: 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 500;
+}
+
+.yoga-intro p {
+    max-width: 580px;
+    margin: 15px auto 0;
+    color: #857568;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* YOGA POSES */
+
+.yoga-poses {
+    padding: 15px 0 40px;
+    scroll-margin-top: 25px;
+}
+
+.yoga-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.yoga-section-heading h2 {
+    margin-top: 8px;
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 500;
+}
+
+.yoga-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.yoga-card {
+    overflow: hidden;
+    background: #FFFCF7;
+    border: 1px solid #EDE3D8;
+    border-radius: 17px;
+    transition: 0.3s ease;
+}
+
+.yoga-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px #69534412;
+}
+
+.yoga-card-art {
+    min-height: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 75px;
+}
+
+.yoga-art-one {
+    background: #F3E5DE;
+}
+
+.yoga-art-two {
+    background: #EAE9D9;
+}
+
+.yoga-art-three {
+    background: #F0E3D3;
+}
+
+.yoga-art-four {
+    background: #F2E8DD;
+}
+
+.yoga-art-five {
+    background: #E8E9DD;
+}
+
+.yoga-art-six {
+    background: #F1E2E2;
+}
+
+.yoga-card-content {
+    padding: 24px;
+}
+
+.yoga-card-content h3 {
+    margin: 5px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.yoga-subtitle {
+    color: #B98282;
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.yoga-card-content > p:not(.yoga-subtitle) {
+    color: #857568;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.yoga-card-content details {
+    border-top: 1px solid #EDE3D8;
+    padding-top: 15px;
+}
+
+.yoga-card-content summary {
+    color: #946D64;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.yoga-card-content ol {
+    padding-left: 20px;
+    margin-top: 15px;
+    color: #857568;
+    font-size: 12px;
+    line-height: 2;
+}
+
+/* YOGA REMINDER */
+
+.yoga-reminder {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-top: 20px;
+    padding: 27px;
+    background: #F3E8E5;
+    border-radius: 15px;
+}
+
+.yoga-reminder-icon {
+    color: #B98282;
+    font-size: 35px;
+}
+
+.yoga-reminder h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.yoga-reminder p {
+    color: #857568;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+
+
+@media (max-width: 600px) {
+    .yoga-page {
+        padding: 35px 6% 45px;
+    }
+
+    .yoga-hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .yoga-hero-text h1 {
+        font-size: 42px;
+    }
+
+    .yoga-hero-text > p {
+        margin: 20px auto 25px;
+    }
+
+    .yoga-hero-art {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .yoga-art-circle {
+        width: 245px;
+        height: 245px;
+    }
+
+    .yoga-hero-emoji {
+        width: 195px;
+        height: 215px;
+        font-size: 95px;
+    }
+
+    .yoga-intro h2,
+    .yoga-section-heading h2 {
+        font-size: 28px;
+    }
+
+    .yoga-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .yoga-card-art {
+        min-height: 155px;
+    }
+
+    .yoga-reminder {
+        padding: 20px;
+        gap: 12px;
+    }
+}
+
+.habits-page {
+    background: #FBF6EF;
+    color: #514239;
+}
+
+.habits-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    border-bottom: 1px solid #EDE1D6;
+}
+
+.habits-logo {
+    color: #785C50;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.habits-back {
+    color: #785C50;
+    text-decoration: none;
+    border: 1px solid #DCC9BA;
+    border-radius: 25px;
+    padding: 10px 18px;
+}
+
+.habits-hero {
+    text-align: center;
+    padding: 65px 20px 55px;
+    background: #F5E9DF;
+}
+
+.habits-label,
+.habits-heading > span {
+    color: #A77C78;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.habits-hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(36px, 6vw, 58px);
+    line-height: 1.15;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.habits-hero p {
+    color: #7C6A60;
+    line-height: 1.8;
+}
+
+.habits-hero-art {
+    font-size: 46px;
+    margin-top: 25px;
+}
+
+.habits-content {
+    padding: 65px 8%;
+}
+
+.habits-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.habits-heading h2,
+.habits-reminder h2 {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    font-weight: normal;
+    margin: 12px 0;
+}
+
+.habits-heading p {
+    color: #88766C;
+}
+
+.habits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.habit-card {
+    background: #FFFCF8;
+    border: 1px solid #EEE2D8;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 22px rgba(105, 77, 59, 0.05);
+    transition: transform 0.25s ease;
+}
+
+.habit-card:hover {
+    transform: translateY(-5px);
+}
+
+.habit-art {
+    height: 145px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 58px;
+}
+
+.habit-art-one {
+    background: #DDEBE6;
+}
+
+.habit-art-two {
+    background: #F3E1D8;
+}
+
+.habit-art-three {
+    background: #E5E9D8;
+}
+
+.habit-art-four {
+    background: #E9E0EF;
+}
+
+.habit-art-five {
+    background: #E5E1EF;
+}
+
+.habit-art-six {
+    background: #DDE9E8;
+}
+
+.habit-art-seven {
+    background: #F6E9CE;
+}
+
+.habit-art-eight {
+    background: #F3DFE3;
+}
+
+.habit-info {
+    padding: 20px;
+}
+
+.habit-category {
+    color: #A77C78;
+    font-size: 9px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.habit-info h3 {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 12px 0;
+}
+
+.habit-info p {
+    color: #827168;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.habits-reminder {
+    text-align: center;
+    margin: 0 8% 65px;
+    padding: 35px 25px;
+    background: #F2E5DC;
+    border-radius: 22px;
+}
+
+.habits-reminder > span {
+    font-size: 35px;
+}
+
+.habits-reminder p {
+    max-width: 550px;
+    margin: 0 auto;
+    color: #79685E;
+    line-height: 1.8;
+}
+
+.habits-footer {
+    text-align: center;
+    padding: 25px;
+    color: #8C776B;
+    border-top: 1px solid #EDE1D6;
+}
+
+@media (max-width: 1000px) {
+    .habits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .habits-header {
+        padding: 18px 5%;
+    }
+
+    .habits-logo {
+        font-size: 20px;
+    }
+
+    .habits-back {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .habits-content {
+        padding: 45px 5%;
+    }
+
+    .habits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .habits-heading h2,
+    .habits-reminder h2 {
+        font-size: 29px;
+    }
+}
+
+.tips-page {
+    background: #FBF6EF;
+    color: #514239;
+}
+
+.tips-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    border-bottom: 1px solid #EDE1D6;
+}
+
+.tips-logo {
+    color: #785C50;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.tips-back {
+    color: #785C50;
+    text-decoration: none;
+    border: 1px solid #DCC9BA;
+    border-radius: 25px;
+    padding: 10px 18px;
+}
+
+.tips-hero {
+    text-align: center;
+    padding: 65px 20px 55px;
+    background: #F5E9DF;
+}
+
+.tips-label,
+.tips-heading > span {
+    color: #A77C78;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.tips-hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(36px, 6vw, 58px);
+    line-height: 1.15;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.tips-hero p {
+    color: #7C6A60;
+    line-height: 1.8;
+}
+
+.tips-hero-art {
+    font-size: 46px;
+    margin-top: 25px;
+}
+
+.tip-of-day {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin: 45px 8% 15px;
+    padding: 30px;
+    background: #EAE9DC;
+    border-radius: 22px;
+}
+
+.tip-day-art {
+    min-width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F9F2E5;
+    border-radius: 50%;
+    font-size: 48px;
+}
+
+.tip-day-content > span {
+    color: #92776A;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+.tip-day-content h2 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+.tip-day-content p {
+    color: #796B60;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+.tips-content {
+    padding: 55px 8%;
+}
+
+.tips-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.tips-heading h2,
+.tips-quote h2 {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    font-weight: normal;
+    margin: 12px 0;
+}
+
+.tips-heading p {
+    color: #88766C;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.tips-card {
+    background: #FFFCF8;
+    border: 1px solid #EEE2D8;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 22px rgba(105, 77, 59, 0.05);
+    transition: transform 0.25s ease;
+}
+
+.tips-card:hover {
+    transform: translateY(-5px);
+}
+
+.tips-art {
+    height: 145px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 58px;
+}
+
+.tips-art-one {
+    background: #E5E9D8;
+}
+
+.tips-art-two {
+    background: #DDEBE6;
+}
+
+.tips-art-three {
+    background: #E5E1EF;
+}
+
+.tips-art-four {
+    background: #E9DDE5;
+}
+
+.tips-art-five {
+    background: #F3DFD7;
+}
+
+.tips-art-six {
+    background: #EAE3D5;
+}
+
+.tips-art-seven {
+    background: #E0E9D9;
+}
+
+.tips-art-eight {
+    background: #F3DFE3;
+}
+
+.tips-card-content {
+    padding: 22px;
+}
+
+.tips-category {
+    color: #A77C78;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.tips-card h3 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    margin: 12px 0;
+}
+
+.tips-card ul {
+    padding-left: 18px;
+    color: #827168;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.tips-quote {
+    text-align: center;
+    margin: 0 8% 65px;
+    padding: 35px 25px;
+    background: #F2E5DC;
+    border-radius: 22px;
+}
+
+.tips-quote > span {
+    font-size: 35px;
+}
+
+.tips-quote p {
+    max-width: 550px;
+    margin: 0 auto;
+    color: #79685E;
+    line-height: 1.8;
+}
+
+.tips-footer {
+    text-align: center;
+    padding: 25px;
+    color: #8C776B;
+    border-top: 1px solid #EDE1D6;
+}
+
+@media (max-width: 900px) {
+    .tips-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .tips-header {
+        padding: 18px 5%;
+    }
+
+    .tips-logo {
+        font-size: 20px;
+    }
+
+    .tips-back {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .tip-of-day {
+        flex-direction: column;
+        text-align: center;
+        margin: 30px 5% 10px;
+        padding: 25px 20px;
+    }
+
+    .tips-content {
+        padding: 45px 5%;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tips-heading h2,
+    .tips-quote h2 {
+        font-size: 29px;
+    }
+}
